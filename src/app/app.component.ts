@@ -1,4 +1,6 @@
+import { getLocaleTimeFormat } from '@angular/common';
 import { Component } from '@angular/core';
+import { timestamp } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular_udemy';
+  pvisible: boolean = true;
+
+  buttonArray = []
+
+  pushButtonArray() {
+    this.buttonArray.push(new Date().toLocaleString())
+  }
 }
