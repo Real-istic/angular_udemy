@@ -1,3 +1,9 @@
-<button class="btn btn-primary" (click)="pvisible = !pvisible; pushButtonArray()">Display Details</button>
-<p *ngIf="pvisible">content of my choice</p>
-<p *ngFor="let button of buttonArray; let i = index" [ngStyle]="{backgroundColor: i > 4 ? 'blue' : 'transparent' }" [ngClass]="{white: buttonArray.length > 5}">{{ button }}</p>
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <app-recipes></app-recipes>
+            <app-shopping-list></app-shopping-list>
+        </div>
+    </div>
+</div>
